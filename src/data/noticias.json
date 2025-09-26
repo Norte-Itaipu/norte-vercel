@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "title": "Itaipu inaugura Núcleo de Tecnologias Espaciais em Santa Helena",
+    "description": "Investimento faz parte de um convênio entre a hidrelétrica binacional e a Universidade Tecnológica Federal do Paraná (UTFPR).",
+    "image": "/images/noticias/noticia1.png",
+    "slug": "Itaipu inaugura Núcleo de Tecnologias Espaciais em Santa Helena",
+    "link": "https://www.h2foz.com.br/itaipu/nucleo-tecnologias-espaciais-santa-helena-utfpr-itaipu/",
+    "date": "2025-05-13"
+  },
+  {
+    "id": 2,
+    "title": "Governo e Itaipu vão instalar placas solares em universidades do Paraná",
+    "description": "Iniciativa beneficiará 240 mil pessoas e reduzirá custos de energia em 118 campi de 17 instituições públicas paranaenses",
+    "image": "/images/noticias/noticia2.png",
+    "slug": "Itaipu inaugura Núcleo de Tecnologias Espaciais em Santa Helena",
+    "link": "https://www.vvale.com.br/itaipu/governo-e-itaipu-vao-instalar-placas-solares-em-universidades-do-parana/",
+    "date": "2025-06-11"
+  },
+  {
+    "id": 3,
+    "title": "Itaipu e UTFPR firmam convênio para implantar Núcleo de Referência em Tecnologias Espaciais",
+    "description": "A Itaipu Binacional estabeleceu um convênio com a Universidade Tecnológica Federal do Paraná (UTFPR) – Campus Santa Helena e a Fundação de Apoio à Educação, Pesquisa e Desenvolvimento Científico e Tecnológico da UTFPR (FUNTEFPR) para implantar o Núcleo de Referência em Tecnologias Espaciais (NORTE), cujas instalações serão no campus da universidade em Santa Helena.",
+    "image": "/images/noticias/noticia3.png",
+    "slug": "Itaipu e Sebrae lançam programa para fomentar inovação em micro e pequenas empresas",
+    "link": "https://www.itaipu.gov.br/noticias/tecnologia/itaipu-e-utfpr-firmam-convenio-para-implantar-nucleo-de-referencia-em-tecnologias-espaciais",
+    "date": "2024-02-26"
+  },
+  {
+    "id": 4,
+    "title": "Com foco na pesquisa e inovação, Itaipu inaugura o Núcleo de Tecnologias Espaciais no Campus Santa Helena da UTFPR.",
+    "description": "A Itaipu Binacional e a Universidade Tecnológica Federal do Paraná (UTFPR) inauguraram, na última segunda-feira (12/5), o Núcleo de Referência em Tecnologias Espaciais (NORTE) no campus de Santa Helena (PR). A cerimônia marcou a entrega de uma infraestrutura moderna, que inclui um pilar geodésico, uma estação GNSS (Global Navigation Satellite System), laboratórios de pesquisa e espaços pedagógicos.",
+    "image": "/images/noticias/noticia4.png",
+    "slug": "Itaipu e Sebrae lançam programa para fomentar inovação em micro e pequenas empresas",
+    "link": "https://funtefpr.org.br/2025/05/30/com-foco-na-pesquisa-e-inovacao-itaipu-inaugura-o-nucleo-de-tecnologias-espaciais-no-campus-santa-helena-da-utfpr/",
+    "date": "2025-05-30"
+  },
+  {
+    "id": 5,
+    "title": "Workshop em parceria com ITAIPU é realizado",
+    "description": "I Workshop do NORTE (Núcleo de Referência em Tecnologias Espaciais) abordou as principais áreas de pesquisa e proporcionou uma maior aproximação da equipe",
+    "image": "/images/noticias/noticia5.png",
+    "slug": "Itaipu e Sebrae lançam programa para fomentar inovação em micro e pequenas empresas",
+    "link": "https://www.utfpr.edu.br/noticias/santa-helena/workshop-itaipu",
+    "date": "2024-02-29"
+  },
+  {
+    "id": 6,
+    "title": "Inaugurações marcam o primeiro semestre dos campi da UTFPR",
+    "description": "A UTFPR tem intensificado os investimentos em infraestrutura neste primeiro semestre de 2025, com a entrega e o início de obras em diversos campi do estado. As melhorias abrangem desde espaços esportivos e laboratórios até usinas fotovoltaicas e novos blocos acadêmicos, beneficiando a comunidade universitária e a população das regiões atendidas.",
+    "image": "/images/noticias/noticia6.png",
+    "slug": "Itaipu e Sebrae lançam programa para fomentar inovação em micro e pequenas empresas",
+    "link": "https://www.utfpr.edu.br/noticias/geral/inauguracoes-marcam-o-primeiro-semestre-dos-campi-da-utfpr",
+    "date": "2025-05-16"
+  },
+  {
+    "id": 7,
+    "title": "UTFPR firma acordo com Itaipu para construção de uma estação GNSS",
+    "description": "A UTFPR, a Itaipu Binacional e a Fundação de Apoio à Educação, Pesquisa e Desenvolvimento Científico e Tecnológico da UTFPR (Funtef) firmaram um convênio de cooperação técnica para a implantação do Núcleo de Referência em Tecnologias Espaciais (NORTE), no Campus de Santa Helena.",
+    "image": "/images/noticias/noticia7.png",
+    "slug": "Itaipu e Sebrae lançam programa para fomentar inovação em micro e pequenas empresas",
+    "link": "https://www.utfpr.edu.br/noticias/geral/utfpr-firma-acordo-com-itaipu-para-construcao-de-uma-estacao-gnss",
+    "date": "2023-05-16"
+  }
+]
