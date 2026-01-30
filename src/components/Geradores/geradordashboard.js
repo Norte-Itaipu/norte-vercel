@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Plot from 'react-plotly.js';
 import axios from 'axios';
-import MenuDashboard from '../menuDashboard';
+import MenuDashboard from '../menu/menuDashboard';
 import LoadingWrapper from '../loadingWrapper';
 
 const GeradorDashboard = () => {

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Plot from 'react-plotly.js';
 import axios from 'axios';
-import Menu from '../menuGraficoIon';
+import Menu from '../menu/menuGraficoIon';
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
+import colors from '@/util/colors';
 
 const GeradorGraficoIon = () => {
   const [data, setData] = useState([]);
@@ -20,12 +21,26 @@ const GeradorGraficoIon = () => {
     elevacaoFinal: 90
   });
 
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const { startDate, endDate, xAxis, yAxis, station, elevacaoInicial, elevacaoFinal } = params;
 
         if (!startDate || !endDate || yAxis.length === 0) return;
+
+        const cacheKey = `ion_data:${station}:${startDate}:${endDate}:${elevacaoInicial}:${elevacaoFinal}:${yAxis.join(',')}`;
+
+        // try {
+        //   const cacheResponse = await axios.get(`/api/cache/ionData?key=${encodeURIComponent(cacheKey)}`);
+        //   if (cacheResponse.data.data) {
+        //     setData(cacheResponse.data.data.plots);
+        //     setDownloadData(cacheResponse.data.data.downloadData);
+        //     return;
+        //   }
+        // } catch (error) {
+        //   console.error('Error fetching cached data:', error);
+        // }
 
         const start = new Date(startDate);
         const end = new Date(endDate);
@@ -109,7 +124,22 @@ const GeradorGraficoIon = () => {
           });
         });
 
+        // Salvar no cache através da API
+        try {
+          await axios.post('/api/cache/ionData', {
+            key: cacheKey,
+            data: {
+              plots,
+              downloadData: combinedData
+            },
+            ttl: 3600 // Cache por 1 hora
+          });
+        } catch (error) {
+          console.error('Error saving to cache:', error);
+        }
+
         setData(plots);
+        setDownloadData(combinedData);
 
       } catch (error) {
         console.error("Error fetching the data: ", error);
@@ -232,9 +262,8 @@ const GeradorGraficoIon = () => {
       <div className="flex justify-center mt-4">
         <button
           onClick={handleDownload}
-          className={`bg-green-500 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-green-600 transition-colors ${
-            downloadData.length === 0 ? 'opacity-50 cursor-not-allowed' : ''
-          }`}
+          className={`text-white py-2 px-4 rounded-lg shadow-lg transition-colors ${downloadData.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+          style={{ backgroundColor: '#61a299' }}
           disabled={downloadData.length === 0}
         >
           Baixar Dados

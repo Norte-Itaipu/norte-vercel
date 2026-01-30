@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Plot from 'react-plotly.js';
 import axios from 'axios';
-import Menu from '../menuGraficoTrp';
+import Menu from '../menu/menuGraficoTrp';
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
 
@@ -148,9 +148,8 @@ const GeradorGraficoTrp = () => {
       <div className="flex justify-center mt-4">
         <button
           onClick={handleDownload}
-          className={`bg-green-500 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-green-600 transition-colors ${
-            downloadData.length === 0 ? 'opacity-50 cursor-not-allowed' : ''
-          }`}
+          className={`text-white py-2 px-4 rounded-lg shadow-lg transition-colors ${downloadData.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+          style={{ backgroundColor: '#61a299' }}
           disabled={downloadData.length === 0}
         >
           Baixar Dados

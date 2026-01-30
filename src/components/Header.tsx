@@ -18,57 +18,38 @@ export default function Header() {
   return (
     <header
       id="inicio"
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed w-full z-50 transition-all duration-300 ${scrolled
           ? "bg-[#0A1A35] shadow-lg"
           : "bg-gradient-to-b from-[#0A1A35] to-transparent"
-      }`}
+        }`}
     >
-      <div className="container mx-auto px-4">
-        {/* Barra de navegação superior */}
-        <div className="hidden md:flex justify-end items-center py-2 text-xs text-blue-100 space-x-4">
-          <Link href="/login" className="hover:text-white transition-colors">
-            Acesso Restrito
-          </Link>
-          <span className="text-blue-300">|</span>
-          <button
-            className="hover:text-white transition-colors bg-transparent border-none p-0 m-0 cursor-pointer"
-            onClick={() => {
-              const footer = document.getElementById("contato");
-              if (footer) {
-                footer.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
-          >
-            Contato
-          </button>
-        </div>
 
+      <div className="container mx-auto px-4">
         {/* Navegação principal */}
-        <nav className="flex justify-between items-center py-4">
-          {/* Logo e nome do projeto */}
-          <Link href="/" className="flex items-center group">
-            <span className="text-xl font-bold text-white group-hover:text-blue-200 transition-colors">
-              {Strings.nucleoReferenciaTitle}
-            </span>
-          </Link>
+        <nav className="flex justify-between items-center py-8">
+          {/* Logo e nome do projeto juntos */}
+          <div className="flex items-center">
+            <div className="relative w-12 h-12 ml-4">
+              <Image
+                src="/images/norte.png"
+                alt="Ícone Norte"
+                fill
+                className="object-contain hover:rotate-12 transition-transform"
+              />
+            </div>
+            <Link href="/" className="flex items-center group ml-2">
+              <span className="text-xl font-bold text-white group-hover:text-blue-200 transition-colors">
+                {Strings.nucleoReferenciaTitle}
+              </span>
+            </Link>
+          </div>
 
           {/* Links de navegação desktop */}
           <div className="hidden md:flex items-center space-x-8">
             <NavLink href="/" label={Strings.sobreProjetoLink} />
             <NavLink href="/metrics" label={Strings.metricasLink} />
-            <NavLink href="/noticias" label={Strings.noticiasLink} />
             <NavLink href="/predict" label={Strings.predicaoLink} />
-            {/* <NavLink href="/dados" label="Dados em Tempo Real" /> */}
-
-            <div className="relative w-8 h-8 ml-4">
-              <Image
-                src="/images/satelite-icon.png"
-                alt="Ícone de Satélite"
-                fill
-                className="object-contain hover:rotate-12 transition-transform"
-              />
-            </div>
+            <NavLink href="/noticias" label={Strings.noticiasLink} />
           </div>
 
           {/* Menu mobile */}
@@ -79,19 +60,16 @@ export default function Header() {
             aria-label="Menu de navegação"
           >
             <span
-              className={`block w-6 h-0.5 bg-white mb-1.5 transition-all ${
-                menuOpen ? "rotate-45 translate-y-2" : ""
-              }`}
+              className={`block w-6 h-0.5 bg-white mb-1.5 transition-all ${menuOpen ? "rotate-45 translate-y-2" : ""
+                }`}
             ></span>
             <span
-              className={`block w-6 h-0.5 bg-white mb-1.5 transition-all ${
-                menuOpen ? "opacity-0" : ""
-              }`}
+              className={`block w-6 h-0.5 bg-white mb-1.5 transition-all ${menuOpen ? "opacity-0" : ""
+                }`}
             ></span>
             <span
-              className={`block w-6 h-0.5 bg-white transition-all ${
-                menuOpen ? "-rotate-45 -translate-y-2" : ""
-              }`}
+              className={`block w-6 h-0.5 bg-white transition-all ${menuOpen ? "-rotate-45 -translate-y-2" : ""
+                }`}
             ></span>
           </button>
         </nav>
@@ -99,9 +77,8 @@ export default function Header() {
 
       {/* Menu mobile expandido */}
       <div
-        className={`md:hidden fixed top-0 right-0 h-full w-80 bg-[#0A1A35] text-white z-50 transform ${
-          menuOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 ease-in-out shadow-2xl`}
+        className={`md:hidden fixed top-0 right-0 h-full w-80 bg-[#0A1A35] text-white z-50 transform ${menuOpen ? "translate-x-0" : "translate-x-full"
+          } transition-transform duration-300 ease-in-out shadow-2xl`}
       >
         <div className="flex justify-between items-center p-6 border-b border-blue-900">
           <span className="text-xl font-bold">Menu</span>
@@ -131,27 +108,14 @@ export default function Header() {
             onClick={() => setMenuOpen(false)}
           />
           <MobileNavLink
-            href="/dados"
-            label=""
+            href="/predict"
+            label={Strings.predicaoLink}
             onClick={() => setMenuOpen(false)}
           />
 
-          <div className="pt-6 mt-6 border-t border-blue-900 space-y-4">
-            <MobileNavLink
-              href="/login"
-              label="Acesso Restrito"
-              onClick={() => setMenuOpen(false)}
-            />
-            <MobileNavLink
-              href="/contato"
-              label="Contato"
-              onClick={() => setMenuOpen(false)}
-            />
-          </div>
         </nav>
       </div>
 
-      {/* Overlay do menu mobile */}
       {menuOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-70 z-40 md:hidden"
